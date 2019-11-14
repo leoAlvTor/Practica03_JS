@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <script src="JavaScript/ScriptForm.js"></script>
+    <title>Registro</title>
+</head>
+<body>
+<header>Formulario de Registro</header>
+<form id="formulario01" method="post" action="" onsubmit="return verificarCampos()">
+    <label>Cedula:</label>
+    <label>
+        <input id="cedula" value='' onkeyup='listenerCedula()' type="text">
+    </label>
+    <span id="mensajeCedula"></span>
+    <br>
+    <label>Nombre:</label>
+    <label>
+        <input id="nombre" onkeyup='listenerNombreApellido()' type="text" value=''>
+    </label>
+    <br>
+    <label>Apellido:</label>
+    <label>
+        <input id="apellido" onkeyup='listenerNombreApellido()' type="text" value=''>
+    </label>
+    <br>
+    <label>Telefono:</label>
+    <label>
+        <input type="text" value='' onkeyup='listenerTelefono()' id="telefono">
+    </label>
+    <br>
+    <label>Fecha de nacimiento:</label>
+    <label>
+        <input type="text" value='' id="fecha">
+    </label>
+    <br>
+    <label>Email:</label>
+    <label>
+        <input id="email" type="text" value="">
+    </label>
+
+    <br>
+    <label>Contrasena:</label>
+    <label>
+        <input id="password" type="password" value="">
+    </label>
+    <br>
+    <input type="submit" id="crear" name="crear" value="Aceptar"/>
+    <br>
+</form>
+</body>
+</html>
