@@ -153,7 +153,6 @@ function listenerNombreApellido() {
         alert("No puede ingresar numeros en el campo apellido.");
         document.getElementById('apellido').value = valorTxtA.replace(/[0-9]/g, "");
     }
-
 }
 
 function listenerTelefono(){

@@ -2,11 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <style type="text/css">
+        img{
+            border-color: black;
+            border-style: solid;
+            border-radius: 20px;
+        }
+
+        .content{
+            max-width: 700px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        button{
+            margin: 0 auto 20px;
+            width: 205px;
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        button:hover{
+
+            background-color: #aed300;
+            border-radius: 10px;
+        }
+
+    </style>
     <title>Imagenes SlideShow</title>
 
 </head>
-<body onload="iniciar()">
-<img id="img" class="mySlides" src="" alt = 'imgs'>
+<body onload="iniciar()" class="content">
+<img id="img" class="center" src="" alt = 'imgs'>
 <br>
 <button id="izq" class="button black left" onclick="izquierda()">Izquierda</button>
 <button id="center" class="button black center" onclick="iniciar()">INICIAR</button>

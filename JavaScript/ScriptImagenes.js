@@ -16,7 +16,10 @@ misImagenes [9]= "Imagenes/10.jpg";
 function iniciar(){
     numActual = 0;
     document.getElementById('izq').disabled = true;
+    document.getElementById('izq').style.backgroundColor = "gray";
     document.getElementById('der').disabled = false;
+    document.getElementById('der').style.backgroundColor = "#4CAF50";
+
     for (let i = 0; i < 5; i++) {
         let numero =  Math.floor(Math.random() * (+9 - + 0)) + +0;
         if(vectorNumeros.includes(numero))
@@ -28,22 +31,25 @@ function iniciar(){
 }
 
 function izquierda(){
-    if(numActual === 0)
+    if(numActual === 0) {
         document.getElementById('izq').disabled = true;
-    else {
+        document.getElementById('izq').style.backgroundColor = "gray";
+    }else {
         numActual--;
         document.getElementById('der').disabled = false;
+        document.getElementById('der').style.backgroundColor = "#4CAF50";
         imgTag.src = misImagenes[vectorNumeros[numActual]];
     }
 }
 
 function derecha(){
-    console.log("NUMERO --:>" + numActual);
-    if(numActual === 4)
+    if(numActual === 4) {
         document.getElementById('der').disabled = true;
-    else{
+        document.getElementById('der').style.backgroundColor = "gray";
+    }else{
         numActual++;
         document.getElementById('izq').disabled=false;
+        document.getElementById('izq').style.backgroundColor = "#4CAF50";
         imgTag.src = misImagenes[vectorNumeros[numActual]];
     }
 }
