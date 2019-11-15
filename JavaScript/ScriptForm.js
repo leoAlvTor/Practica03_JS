@@ -1,8 +1,8 @@
 function verificarCampos() {
     var bandera = true;
     for(var i = 0; i < document.forms[0].elements.length; i++){
-        var elemento = document.forms[0].elements[i];
-        if(elemento.value === '' && elemento.type === 'text') {
+        let elemento = document.forms[0].elements[i];
+        if(elemento.value === '' && elemento.type === 'text' || elemento.type==='password') {
             if (elemento.id === cedula)
                 document.getElementById('mensajeCedula').innerHTML = '<br> La cedula esta vacia';
             elemento.style.border = '1px red solid';
@@ -14,31 +14,49 @@ function verificarCampos() {
         alert('Revisar que todo este completo');
     }else{
         if(validarCedula(document.getElementById('cedula').value) === false) {
-            alert("Se ha ingresado una cedula incorrecta.");
+            document.getElementById('mensajeCedula').innerHTML = '<br> La cedula no es correcta';
+            document.getElementById('cedula').style.border = '2px red solid';
             return false;
         }
         if(validarNombreApellido(document.getElementById('nombre').value) === false){
-            alert("Debe ingresar al menos 1 nombre.");
+            document.getElementById('mensajeNombre').innerHTML = '<br> Debe ingresar al menos 1 nombre';
+            document.getElementById('nombre').style.border = '2px red solid';
             return false;
         }
         if(validarNombreApellido(document.getElementById('apellido').value) === false){
-            alert('Debe ingresar al menos 1 apellido.');
+            document.getElementById('mensajeApellido').innerHTML = '<br> Debe ingresar al menos 1 apellido';
+            document.getElementById('apellido').style.border = '2px red solid';
+            return false;
+        }
+        if(validarTelefono(document.getElementById('telefono').value) === false){
+            document.getElementById('mensajeTelefono').innerHTML = '<br> Debe tener 10 digitos.';
+            document.getElementById('telefono').style.border = '2px red solid';
             return false;
         }
         if(validarFechaNac(document.getElementById('fecha').value) === false){
-            alert('Debe ingresar una fecha valida en formato dd/mm/yyyy');
+            document.getElementById('mensajeFecha').innerHTML = '<br> Debe ingresar una fecha en el formato dd/mm/yyyy';
+            document.getElementById('fecha').style.border = '2px red solid';
             return false;
         }
         if(validarCorreo(document.getElementById('email').value) === false){
-            alert('El correo esta mal ingresado, por favor reviselo.');
+            document.getElementById('mensajeEmail').innerHTML = '<br> El correo esta mal ingresado por favor reviselo.';
+            document.getElementById('email').style.border = '2px red solid';
             return false;
         }
         if(validarPassword(document.getElementById('password').value) === false){
-            alert('El Passowrd no cumple con los requerimientos de complejidad.');
+            document.getElementById('mensajePassowrd').innerHTML = '<br> El password no cumple con la complejidad';
+            document.getElementById('password').style.border = '2px red solid';
             return false;
         }
     }
     return bandera;
+}
+
+function validarTelefono(x) {
+    if(x.length===10)
+        return true;
+    else
+        return false;
 }
 
 function validarCedula(x) {
