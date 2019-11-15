@@ -1,6 +1,6 @@
-#Trabajo Javascript HTML
+*Trabajo Javascript HTML*
 
-####Evidencias 1ra Parte:
+**Evidencias 1ra Parte:**
 
 **Prueba ingresando letras a la cedula.**
 ![](readimgs/image--002.png)
