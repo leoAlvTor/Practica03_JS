@@ -38,7 +38,6 @@ function verificarCampos() {
             return false;
         }
     }
-    alert('Se han ingresado todos los valores.');
     return bandera;
 }
 
@@ -163,7 +162,7 @@ function listenerTelefono(){
     let cantidadNumerico = valorTelefono.length;
     let testeoTelefono = regTelefono.test(valorTelefono);
     if(testeoTelefono === false){
-        alert("No puede ingresar letras en el campo apellido");
+        alert("No puede ingresar letras en el campo telefono");
         valorTelefono = valorTelefono.substring(0, valorTelefono.length - 1);
         document.getElementById('telefono').value = valorTelefono;
         return false;

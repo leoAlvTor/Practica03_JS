@@ -8,40 +8,46 @@
 </head>
 <body>
 <header>Formulario de Registro</header>
-<form id="formulario01" method="post" action="" onsubmit="return verificarCampos()">
+<form id="formulario01" method="POST" action="PHP/JSPhp.php" onsubmit="return verificarCampos()">
     <label>Cedula:</label>
+    <br>
     <label>
         <input id="cedula" value='' onkeyup='listenerCedula()' type="text">
     </label>
     <span id="mensajeCedula"></span>
     <br>
     <label>Nombre:</label>
+    <br>
     <label>
         <input id="nombre" onkeyup='listenerNombreApellido()' type="text" value=''>
     </label>
     <br>
     <label>Apellido:</label>
+    <br>
     <label>
         <input id="apellido" onkeyup='listenerNombreApellido()' type="text" value=''>
     </label>
     <br>
     <label>Telefono:</label>
+    <br>
     <label>
         <input type="text" value='' onkeyup='listenerTelefono()' id="telefono">
     </label>
     <br>
     <label>Fecha de nacimiento:</label>
+    <br>
     <label>
         <input type="text" value='' id="fecha">
     </label>
     <br>
     <label>Email:</label>
+    <br>
     <label>
         <input id="email" type="text" value="">
     </label>
-
     <br>
     <label>Contrasena:</label>
+    <br>
     <label>
         <input id="password" type="password" value="">
     </label>

@@ -1,3 +1,0 @@
-function aleatorio(){
-    windows.FILE
-}

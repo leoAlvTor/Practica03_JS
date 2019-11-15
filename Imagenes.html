@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="JavaScript/ScriptImg.js"></script>
-    <title>Trabajo Imagenes</title>
-</head>
-<body>
+    <title>Imagenes SlideShow</title>
 
-<button onclick="aleatorio()"> Anterior </button><button> Inicio </button> <button> Siguiente </button>
+</head>
+<body onload="iniciar()">
+<img id="img" class="mySlides" src="" alt = 'imgs'>
+<br>
+<button id="izq" class="button black left" onclick="izquierda()">Izquierda</button>
+<button id="center" class="button black center" onclick="iniciar()">INICIAR</button>
+<button id="der" class="button black right" onclick="derecha()">Derecha</button>
+
 </body>
+<script type="text/javascript" src="JavaScript/ScriptImagenes.js"></script>
 </html>
